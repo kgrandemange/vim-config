@@ -1,12 +1,8 @@
 set nocompatible " Be iMproved
 
-" Grab plug.vim if it does not exist
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
+source /etc/vim/autoload/plug.vim
 
-call plug#begin()
+call plug#begin('/etc/vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
@@ -26,9 +22,9 @@ Plug 'tpope/vim-fugitive'              " Git integration
 Plug 'tpope/vim-projectionist'
 
 
-source ~/.vim/functions.vim
-source ~/.vim/settings.vim
-source ~/.vim/settings/nerdtree.vim
-source ~/.vim/keybindings.vim
+source /etc/vim/functions.vim
+source /etc/vim/settings.vim
+source /etc/vim/settings/nerdtree.vim
+source /etc/vim/keybindings.vim
 
 call plug#end()

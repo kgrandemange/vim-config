@@ -1,6 +1,8 @@
+" Different viminfo location
+set viminfo+=n/files/.viminfo
+
 " Colorscheme
 set background=dark
-colorscheme monokai
 
 " Set UTF-8 as default encoding
 set encoding=utf-8
@@ -40,11 +42,6 @@ set cursorline
 set cursorcolumn
 highlight cursorcolumn cterm=NONE ctermbg=NONE ctermfg=DarkGray
 
-" Highlight max line length
-let &colorcolumn=join(range(81,999),",")
-let &colorcolumn="80,".join(range(121,999),",")
-autocmd FileType markdown let &colorcolumn=""
-
 " Show stuff like end of line, tabs and so on
 set list
 
@@ -61,11 +58,6 @@ autocmd BufNewFile,BufRead *.phtml setlocal ts=4 sts=4 sw=4 expandtab
 
 " Enabled spell checking and set textwidth to 80 characters for markdown and text files
 autocmd BufNewFile,BufRead *.md,*.markdown,*.txt setlocal spell textwidth=80
-
-" Airline
-let g:airline_powerline_fonts = 1
-g:airline#extensions#syntastic#enabled
-set laststatus=2
 
 " 'Hidden' buffers -- i.e., don't require saving before editing another file.
 " Calling quit will prompt you to save unsaved buffers anyways.
