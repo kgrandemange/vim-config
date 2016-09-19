@@ -1,3 +1,5 @@
+THIS REPOSITORY IS NOT MAINTAINED ANYMORE, because I moved its content to https://github.com/quafzi/dotfiles/tree/master/vim.
+
 ====================
 My vim configuration
 ====================
